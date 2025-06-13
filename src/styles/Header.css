@@ -1,0 +1,27 @@
+header {
+   background: #fdf4f6;
+   width: 100%;
+   height: 300px;
+   color: #dd2d50;
+   font-size: 26px;
+}
+.header-container {
+   width: 50%;
+   height: 100%;
+   display: flex;
+   justify-content: space-around;
+   margin: 0 auto;
+}
+.container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+}
+
+.picture {
+   background: transparent;
+   width: 100%;
+   height: 10%;
+}

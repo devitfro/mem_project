@@ -1,0 +1,11 @@
+button {
+   background: #dd2c50;
+   padding: 1rem 2rem;
+   color: aliceblue;
+   border-radius: 8px;
+   border: none;
+   cursor: pointer;
+}
+button:active {
+   transform: scale(0.95);
+}
