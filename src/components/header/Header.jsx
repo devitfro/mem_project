@@ -1,8 +1,6 @@
-import '../styles/Header.css'
-
-import headerPicture from '../images/header-picture.png'
-import HeaderButton  from './HeaderButton';
-
+import './Header.css'
+import headerPicture from '../../images/header-picture.png'
+import HeaderButton  from '../header-button/HeaderButton'
 
 function Header() {
    return (

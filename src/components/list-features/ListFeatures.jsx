@@ -1,8 +1,8 @@
-import '../styles/ListFeatures.css'
-import FirstLevelCards from '../components/FirstLevelCards'
-import SecondLevelCards from '../components/SecondLevelCards'
-import ThirdLevelCards  from '../components/ThirdLevelCards'
+import './ListFeatures.css'
 
+import FirstLevelCards from '../level-with-images/FirstLevelCards'
+import SecondLevelCards from '../level-with-images/SecondLevelCards'
+import ThirdLevelCards  from '../level-with-videos/ThirdLevelCards'
 
 function ListFeatures() {
    return(

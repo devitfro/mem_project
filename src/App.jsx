@@ -1,6 +1,6 @@
 import './App.css'
-import Header from './components/Header'
-import ListFeatures from './components/ListFeatures'
+import Header from './components/header/Header'
+import ListFeatures from './components/list-features/ListFeatures'
 
 
 function App() {

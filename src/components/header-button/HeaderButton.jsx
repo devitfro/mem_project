@@ -1,4 +1,4 @@
-import '../styles/HeaderButton.css'
+import './HeaderButton.css';
 
 function HeaderButton() {
    return (

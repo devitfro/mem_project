@@ -1,8 +1,9 @@
-import '../styles/LevelCards.css'
-import img01 from '../images/01.jpg'
-import img03 from '../images/03.jpg'
-import img04 from '../images/04.jpg'
-import img09 from '../images/09.jpg'
+import './ImagesLevel.css';
+
+import img01 from '../../images/01.jpg'
+import img03 from '../../images/03.jpg'
+import img04 from '../../images/04.jpg'
+import img09 from '../../images/09.jpg'
 
 function FirstLevelCards() {
    return (

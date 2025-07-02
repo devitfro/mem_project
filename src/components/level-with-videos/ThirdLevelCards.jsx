@@ -1,4 +1,5 @@
-import '../styles/LevelCards.css'
+import './VideosLevel.css'
+
 function ThirdLevelVideos() {
   return (
     <div className="third-level-videos level-container">
@@ -11,7 +12,7 @@ function ThirdLevelVideos() {
         allowFullScreen
       ></iframe>
 
-          <iframe
+        <iframe
         width="500"
         height="350"
         src="https://www.youtube.com/embed/Jo6fKboqfMs"
