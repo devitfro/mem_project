@@ -5,13 +5,14 @@ import img03 from '../../images/03.jpg'
 import img04 from '../../images/04.jpg'
 import img09 from '../../images/09.jpg'
 
+const images = [img01, img03, img04, img09];
+
 function FirstLevelCards() {
    return (
       <div className="level-container">
-         <img src={img01} alt="mem 1" />
-         <img src={img03} alt="mem 2" />
-         <img src={img04} alt="mem 3" />
-         <img src={img09} alt="mem 4" />
+         {images.map((src, index) => (
+            <img key={index} src={src} alt={`mem ${index + 1}`}/>
+         ))}
       </div>
    );
 }

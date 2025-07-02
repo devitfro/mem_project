@@ -1,18 +1,16 @@
 import './Header.css'
-import headerPicture from '../../images/header-picture.png'
 import HeaderButton  from '../header-button/HeaderButton'
 
-function Header() {
+function Header(props) {
    return (
       <header>
          <div className='header-container'>
             <div className="container">
-               <h1>Choose your favorite mem!</h1>
-               <HeaderButton/>
+               <h1>{props.title}</h1>
+               <HeaderButton {...props.headerButtonProps}/>
             </div>
-            <img src={headerPicture} alt='header mem' className='header-picture'/>
-         </div>
-         
+            <img src={props.imageStyle.src} alt={props.imageStyle.alt} className={props.imageStyle.className}/>
+         </div>  
       </header>
    );
 }

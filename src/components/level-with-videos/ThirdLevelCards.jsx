@@ -1,33 +1,16 @@
 import './VideosLevel.css'
 
-function ThirdLevelVideos() {
+function ThirdLevelVideos(props) {
   return (
     <div className="third-level-videos level-container">
-      <iframe
-        width="500"
-        height="350"
-        src="https://www.youtube.com/embed/AFC-3PH79gQ"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      {props.videos.map((video, index) => (
+        <iframe width={props.width}
+        height={props.height}
+        allow={props.allow}
         allowFullScreen
-      ></iframe>
-
-        <iframe
-        width="500"
-        height="350"
-        src="https://www.youtube.com/embed/Jo6fKboqfMs"
-        title="YouTube video player 2"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
-      <iframe
-        width="500"
-        height="350"
-        src="https://www.youtube.com/embed/IkCh8VfN2d4"
-        title="YouTube video player 4"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
+        src={video.src}
+        title={props.title} />
+      ))}
     </div>
   );
 }
