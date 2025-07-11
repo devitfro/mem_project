@@ -1,17 +1,40 @@
 import './ImagesLevel.css';
 
-import img01 from '../../images/01.jpg'
-import img03 from '../../images/03.jpg'
-import img04 from '../../images/04.jpg'
-import img09 from '../../images/09.jpg'
+import { useState, useEffect } from 'react';
 
-const images = [img01, img03, img04, img09];
 
 function FirstLevelCards() {
-   return (
+   const[images, setImages] = useState([]);
+   const[pageIndex, setPageIndex] = useState(0);
+
+   useEffect(() => {
+     fetch("./data/image.json")
+         .then(res => res.json())
+         .then(data => setImages(data))
+         .catch(err => console.log(err));
+   },[]);
+   
+
+   useEffect(() => {
+      const interval = setInterval(() => {
+         setPageIndex(prev => {
+            const totalPages = Math.ceil(images.length / 4);
+            console.log("img length", images.length);
+            return prev < totalPages - 1 ? prev + 1 : 0;
+         });
+      }, 3000);
+
+      return () => clearInterval(interval);
+   }, [images]);
+
+
+   const start = pageIndex * 4;
+   const end = start + 4;
+   const visibleImages = images.slice(start, end);
+      return (
       <div className="level-container">
-         {images.map((src, index) => (
-            <img key={index} src={src} alt={`mem ${index + 1}`}/>
+         {visibleImages.map((src, index) => (
+            <img key={index} src={src} alt={`mem ${start + index + 1}`} />
          ))}
       </div>
    );
