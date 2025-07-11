@@ -5,6 +5,7 @@ function ThirdLevelVideos(props) {
     <div className="third-level-videos level-container">
       {props.videos.map((video, index) => (
         <iframe width={props.width}
+        key={index}
         height={props.height}
         allow={props.allow}
         allowFullScreen

@@ -29,8 +29,7 @@ function ListFeatures(props) {
                </li>
             </ul>
          </div>
-      </div>
-      
+      </div>    
    )
 }
 

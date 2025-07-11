@@ -19,14 +19,12 @@ function FirstLevelCards() {
       const interval = setInterval(() => {
          setPageIndex(prev => {
             const totalPages = Math.ceil(images.length / 4);
-            console.log("img length", images.length);
             return prev < totalPages - 1 ? prev + 1 : 0;
          });
       }, 3000);
 
       return () => clearInterval(interval);
    }, [images]);
-
 
    const start = pageIndex * 4;
    const end = start + 4;

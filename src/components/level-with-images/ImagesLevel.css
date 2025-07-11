@@ -7,9 +7,8 @@
 }
 
 .level-container img {
-   max-height: 100%;
-  max-width: calc((100% - 2rem) / 3);
-  object-fit: cover; 
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+   min-width: 200px;
+   height: 250px;
+   border-radius: 8px;
+   gap: 2rem;
 }
